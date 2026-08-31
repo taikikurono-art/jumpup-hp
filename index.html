@@ -131,6 +131,10 @@
   .program-card h3{font-size:19px;margin-bottom:6px;}
   .program-card .sub{font-size:13px;color:var(--orange-deep);font-weight:700;margin-bottom:14px;}
   .program-card p{font-size:14px;color:var(--ink-soft);}
+  .program-videos{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:20px;}
+  .video-wrap{position:relative;width:100%;padding-bottom:56.25%;border-radius:12px;overflow:hidden;background:#000;}
+  .video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
+  .video-caption{margin-top:8px;font-size:13px;font-weight:700;color:var(--orange-deep);text-align:center;}
 
   /* class list */
   .class-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
@@ -267,6 +271,16 @@
         <h3>幼稚園・保育園・子ども園</h3>
         <p class="sub">正課・課外体操教室</p>
         <p>運動が得意な子も苦手な子も、様々な個性の子どもたちへの配慮、クラス理解、園の保育方針などを踏まえて指導しています。体操の時間として切り分けるのではなく、保育の一環として先生方と一緒に子どもたちを支えていける関係を目指します。子どもの育ちを支える先生方の良き理解者であるパートナーでありたいと考えています。</p>
+        <div class="program-videos">
+          <div class="video-item">
+            <div class="video-wrap"><iframe src="https://www.youtube.com/embed/u7IRxFztjxU" title="正課（幼児）レッスン動画" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            <p class="video-caption">正課（幼児）</p>
+          </div>
+          <div class="video-item">
+            <div class="video-wrap"><iframe src="https://www.youtube.com/embed/5e5CyCe2PJI" title="課外（小学生）レッスン動画" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+            <p class="video-caption">課外（小学生）</p>
+          </div>
+        </div>
       </div>
       <div class="program-card">
         <span class="tag">②</span>

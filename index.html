@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>子供向け運動教室 JUMP UP｜名古屋・春日井</title>
+<meta name="description" content="JUMP UPは名古屋・春日井エリアで活動する子ども向けの運動教室です。保育士資格を持つ指導員が、運動が得意な子も苦手な子も「できる！が楽しい！」と感じられるレッスンをお届けします。幼稚園・保育園向けの正課・課外体操教室と、誰でも通えるスタジオレッスンを開講中。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="子供向け運動教室 JUMP UP｜名古屋・春日井">
+<meta property="og:description" content="できる！が楽しい！を実感できる運動教室。名古屋・春日井エリアで活動する子ども向け運動教室JUMP UP。">
+<meta property="og:url" content="https://jumpup-nagoya.com/">
+<meta property="og:locale" content="ja_JP">
+<link rel="canonical" href="https://jumpup-nagoya.com/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SportsActivityLocation",
+  "name": "JUMP UP",
+  "description": "名古屋・春日井エリアで活動する子ども向けの運動教室。幼稚園・保育園向けの正課・課外体操教室と、幼児〜中学生向けのスタジオレッスンを開講。",
+  "url": "https://jumpup-nagoya.com/",
+  "areaServed": ["名古屋市", "春日井市"],
+  "parentOrganization": {
+    "@type": "Organization",
+    "name": "エデュカーレ",
+    "url": "https://educare-nagoya.com/"
+  }
+}
+</script>
+<style>
+  :root{
+    --orange:#ff8a3d;
+    --orange-deep:#f2661a;
+    --yellow:#ffd166;
+    --cream:#fff8ef;
+    --ink:#3a2e26;
+    --ink-soft:#6b5c4f;
+    --white:#ffffff;
+    --radius:24px;
+    --shadow:0 10px 30px rgba(242,102,26,0.12);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:"Zen Maru Gothic","Hiragino Maru Gothic ProN","Hiragino Sans",sans-serif;
+    color:var(--ink);
+    background:var(--cream);
+    line-height:1.85;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+  section{padding:80px 0;}
+  h1,h2,h3{font-weight:900;line-height:1.4;}
+  h2{font-size:clamp(24px,4vw,34px);text-align:center;margin-bottom:12px;}
+  .lead{text-align:center;color:var(--ink-soft);max-width:620px;margin:0 auto 48px;font-size:15px;}
+  .eyebrow{display:block;text-align:center;color:var(--orange-deep);font-weight:700;letter-spacing:0.15em;font-size:12px;margin-bottom:8px;}
+
+  /* header */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:rgba(255,248,239,0.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid rgba(242,102,26,0.12);
+  }
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 24px;max-width:1080px;margin:0 auto;}
+  .logo{font-size:22px;font-weight:900;color:var(--orange-deep);letter-spacing:0.02em;}
+  .logo span{font-size:12px;display:block;font-weight:500;color:var(--ink-soft);letter-spacing:0.1em;}
+  .nav-links{display:flex;gap:24px;font-size:14px;font-weight:700;}
+  .nav-links a{opacity:0.8;}
+  .nav-links a:hover{opacity:1;color:var(--orange-deep);}
+  .cta-btn{
+    display:inline-block;
+    background:var(--orange-deep);
+    color:#fff !important;
+    padding:12px 26px;
+    border-radius:999px;
+    font-weight:900;
+    font-size:14px;
+    box-shadow:var(--shadow);
+    transition:transform .15s ease;
+    white-space:nowrap;
+  }
+  .cta-btn:hover{transform:translateY(-2px);}
+  .nav .cta-btn{padding:10px 20px;font-size:13px;}
+
+  /* hero */
+  .hero{
+    padding:72px 0 60px;
+    background:
+      radial-gradient(circle at 85% 10%, rgba(255,209,102,0.5), transparent 45%),
+      radial-gradient(circle at 5% 90%, rgba(255,138,61,0.25), transparent 40%);
+    text-align:center;
+  }
+  .hero .eyebrow{font-size:13px;}
+  .hero h1{font-size:clamp(30px,5.5vw,48px);margin:10px 0 22px;color:var(--ink);}
+  .hero h1 em{font-style:normal;color:var(--orange-deep);}
+  .hero p{max-width:600px;margin:0 auto 32px;color:var(--ink-soft);font-size:16px;}
+  .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .cta-btn.ghost{background:#fff;color:var(--orange-deep) !important;border:2px solid var(--orange-deep);box-shadow:none;}
+
+  /* features */
+  .features{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;}
+  .feature-card{
+    background:#fff;border-radius:var(--radius);padding:30px 26px;box-shadow:var(--shadow);
+  }
+  .feature-card .icon{
+    width:48px;height:48px;border-radius:16px;background:var(--yellow);
+    display:flex;align-items:center;justify-content:center;font-size:22px;margin-bottom:16px;
+  }
+  .feature-card h3{font-size:17px;margin-bottom:10px;}
+  .feature-card p{font-size:14px;color:var(--ink-soft);}
+
+  .badge-row{margin-top:36px;background:#fff;border-radius:var(--radius);padding:28px 30px;box-shadow:var(--shadow);display:flex;gap:20px;align-items:center;flex-wrap:wrap;}
+  .badge-row .num{font-size:34px;font-weight:900;color:var(--orange-deep);}
+  .badge-row p{font-size:14px;color:var(--ink-soft);flex:1;min-width:220px;}
+
+  /* programs */
+  .programs-alt{background:#fff5e8;}
+  .program-cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;}
+  .program-card{
+    background:#fff;border-radius:var(--radius);padding:32px;box-shadow:var(--shadow);
+  }
+  .program-card .tag{
+    display:inline-block;background:var(--orange-deep);color:#fff;font-size:12px;font-weight:700;
+    padding:4px 12px;border-radius:999px;margin-bottom:14px;
+  }
+  .program-card h3{font-size:19px;margin-bottom:6px;}
+  .program-card .sub{font-size:13px;color:var(--orange-deep);font-weight:700;margin-bottom:14px;}
+  .program-card p{font-size:14px;color:var(--ink-soft);}
+
+  /* class list */
+  .class-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;}
+  .class-card{
+    background:var(--ink);color:#fff;border-radius:var(--radius);padding:26px;
+  }
+  .class-card .age{font-size:12px;color:var(--yellow);font-weight:700;margin-bottom:6px;}
+  .class-card h3{font-size:18px;margin-bottom:10px;}
+  .class-card p{font-size:13px;color:#e6dcd2;}
+
+  /* schedule */
+  .schedule-list{display:flex;flex-direction:column;gap:20px;}
+  .schedule-card{
+    background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);
+    padding:28px 30px;display:grid;grid-template-columns:120px 1fr;gap:24px;
+  }
+  .schedule-day{
+    display:flex;flex-direction:column;align-items:flex-start;justify-content:center;
+  }
+  .schedule-day .dow{font-size:22px;font-weight:900;color:var(--orange-deep);}
+  .schedule-card h3{font-size:17px;margin-bottom:4px;}
+  .schedule-card .area{font-size:13px;color:var(--ink-soft);margin-bottom:14px;}
+  .schedule-card .lesson-line{font-size:14px;margin-bottom:6px;}
+  .schedule-card .lesson-line strong{color:var(--orange-deep);}
+  .fee-box{
+    margin-top:14px;background:var(--cream);border-radius:14px;padding:14px 18px;font-size:13px;color:var(--ink-soft);
+  }
+  .fee-box b{color:var(--ink);}
+  .note{font-size:12px;color:var(--ink-soft);margin-top:10px;}
+  @media (max-width:600px){
+    .schedule-card{grid-template-columns:1fr;}
+    .schedule-day{flex-direction:row;gap:8px;align-items:baseline;}
+  }
+
+  /* instructors */
+  .instructors{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;}
+  .instructor-card{background:#fff;border-radius:var(--radius);padding:30px;box-shadow:var(--shadow);}
+  .instructor-card .avatar{
+    width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--orange),var(--yellow));
+    margin-bottom:16px;
+  }
+  .instructor-card h3{font-size:18px;margin-bottom:2px;}
+  .instructor-card .role{font-size:12px;color:var(--orange-deep);font-weight:700;margin-bottom:14px;}
+  .instructor-card p{font-size:13px;color:var(--ink-soft);}
+
+  /* voices */
+  .voices-alt{background:#fff5e8;}
+  .voice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;}
+  .voice-card{background:#fff;border-radius:18px;padding:22px 24px;box-shadow:var(--shadow);}
+  .voice-card .who{font-size:12px;font-weight:700;color:var(--orange-deep);margin-bottom:8px;}
+  .voice-card p{font-size:13px;color:var(--ink-soft);}
+
+  /* cta section */
+  .cta-section{
+    text-align:center;
+    background:linear-gradient(135deg,var(--orange-deep),var(--orange));
+    color:#fff;border-radius:32px;margin:0 24px;padding:56px 24px;
+  }
+  .cta-section h2{color:#fff;}
+  .cta-section p{color:rgba(255,255,255,0.9);max-width:520px;margin:0 auto 28px;font-size:15px;}
+  .cta-section .cta-btn{background:#fff;color:var(--orange-deep) !important;}
+
+  /* footer */
+  footer{padding:48px 0 32px;text-align:center;font-size:13px;color:var(--ink-soft);}
+  footer .foot-links{display:flex;gap:18px;justify-content:center;flex-wrap:wrap;margin-bottom:16px;font-weight:700;}
+  footer .foot-links a:hover{color:var(--orange-deep);}
+  footer .brand{font-weight:900;color:var(--ink);margin-bottom:6px;}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">JUMP UP<span>子供向け運動教室</span></div>
+    <nav class="nav-links">
+      <a href="#program">プログラム</a>
+      <a href="#schedule">教室・料金</a>
+      <a href="#instructors">講師紹介</a>
+      <a href="#voices">利用者の声</a>
+    </nav>
+    <a class="cta-btn" href="https://lin.ee/s6IoexC" target="_blank" rel="noopener">体験レッスン申し込み</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">名古屋・春日井エリアの子ども向け運動教室</span>
+    <h1>できる！が楽しい！を<br><em>実感できる</em>運動教室</h1>
+    <p>エデュカーレの体操教室「JUMP UP（ジャンプアップ）」は、名古屋・春日井エリアで活動する子ども向けの運動教室です。運動が得意な子も苦手な子も、それぞれのペースで「できた！」を積み重ねていける場所を目指しています。</p>
+    <div class="hero-actions">
+      <a class="cta-btn" href="https://lin.ee/s6IoexC" target="_blank" rel="noopener">体験レッスンに参加する</a>
+      <a class="cta-btn ghost" href="#schedule">教室・スケジュールを見る</a>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <span class="eyebrow">JUMP UPの特徴</span>
+    <h2>レッスンの特徴</h2>
+    <p class="lead">笛は使わず、会話とスキンシップを大切に。運動が得意でも苦手でも、誰もが前向きに挑戦できる雰囲気づくりを何より大事にしています。</p>
+    <div class="features">
+      <div class="feature-card">
+        <div class="icon">💬</div>
+        <h3>コミュニケーションを大切に</h3>
+        <p>会話やスキンシップでのコミュニケーションを大切にしています。子どもたちとの会話を楽しみ、レッスン全体の雰囲気を作ります。笛などは使用しません。</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🌱</div>
+        <h3>気持ちを大切に</h3>
+        <p>少しずつ技に取り組む前向きな姿勢や気持ちを大切にしています。運動の得意・不得意に関わらず、誰もが挑戦できる環境を作ります。</p>
+      </div>
+      <div class="feature-card">
+        <div class="icon">🤸</div>
+        <h3>運動量を確保</h3>
+        <p>エアマット（空気入り運動用マット）を使用し、省スペースでも運動量を確保できるプログラムを実施。遊びの要素も取り入れ、意欲的に運動に親しめる雰囲気を作ります。</p>
+      </div>
+    </div>
+    <div class="badge-row">
+      <div class="num">保育士<br>資格</div>
+      <p>JUMP UPでは、保育士資格を持ち5年以上の保育現場経験を積んだ指導員がレッスンを担当。運動技術の指導だけでなく、子どもの発達や気持ちの動きを理解した関わりを大切にしています。</p>
+    </div>
+  </div>
+</section>
+
+<section id="program" class="programs-alt">
+  <div class="wrap">
+    <span class="eyebrow">PROGRAM</span>
+    <h2>2つのプログラム</h2>
+    <p class="lead">園での正課・課外授業と、誰でも通えるスタジオレッスン。お子さんに合わせて選べます。</p>
+    <div class="program-cards">
+      <div class="program-card">
+        <span class="tag">①</span>
+        <h3>幼稚園・保育園・子ども園</h3>
+        <p class="sub">正課・課外体操教室</p>
+        <p>運動が得意な子も苦手な子も、様々な個性の子どもたちへの配慮、クラス理解、園の保育方針などを踏まえて指導しています。体操の時間として切り分けるのではなく、保育の一環として先生方と一緒に子どもたちを支えていける関係を目指します。子どもの育ちを支える先生方の良き理解者であるパートナーでありたいと考えています。</p>
+      </div>
+      <div class="program-card">
+        <span class="tag">②</span>
+        <h3>誰でも通えるスタジオレッスン</h3>
+        <p class="sub">幼児・小学生・中学生</p>
+        <p>小学生を中心としたスタジオレッスンでは、体を動かす楽しさを大切にしながら、一人ひとりの成長を応援しています。安心できる環境の中で、少しずつ「できること」を増やしていく体操教室です。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="class">
+  <div class="wrap">
+    <span class="eyebrow">CLASS</span>
+    <h2>活動クラス</h2>
+    <div class="class-grid">
+      <div class="class-card">
+        <div class="age">3歳〜</div>
+        <h3>技チャレンジクラス</h3>
+        <p>体を動かす楽しさを味わいながら、少しずつ新しい技にチャレンジしていくクラスです。</p>
+      </div>
+      <div class="class-card">
+        <div class="age">小学生〜</div>
+        <h3>アクロバットクラス</h3>
+        <p>運動の得意・不得意に関わらず、誰もが挑戦できる環境でアクロバット系の技に取り組みます。</p>
+      </div>
+      <div class="class-card">
+        <div class="age">小学生〜</div>
+        <h3>バク転クラス</h3>
+        <p>エアマットを使用し、省スペースでもしっかり運動量を確保しながらバク転の習得を目指します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="schedule" class="programs-alt">
+  <div class="wrap">
+    <span class="eyebrow">LOCATION &amp; SCHEDULE</span>
+    <h2>教室・スケジュール</h2>
+    <p class="lead">名古屋・春日井エリアで、曜日ごとに教室を開講しています。</p>
+    <div class="schedule-list">
+
+      <div class="schedule-card">
+        <div class="schedule-day"><div class="dow">火曜</div></div>
+        <div>
+          <h3>ココロネ学園教室（学童内体操教室）</h3>
+          <div class="area">名古屋市中川区エリア</div>
+          <div class="lesson-line"><strong>技チャレンジクラス</strong> 16:10〜16:55（講師：野村）</div>
+          <div class="lesson-line"><strong>アクロバットクラス</strong> 17:10〜17:55（講師：野村）</div>
+          <div class="fee-box">
+            <b>レッスン料金：</b>入会金3,000円（初年度保険料含む）／月会費5,500円／兄弟姉妹割引：合計より1,000円引き／更新料1,000円
+          </div>
+          <p class="note">ココロネ学園の学童利用がなくても体操教室のみの参加が可能です（学童システム利用料 月880円税込が別途発生します）。</p>
+        </div>
+      </div>
+
+      <div class="schedule-card">
+        <div class="schedule-day"><div class="dow">月曜</div></div>
+        <div>
+          <h3>ルネック勝川7F 多目的ホール</h3>
+          <div class="area">春日井エリア</div>
+          <div class="lesson-line"><strong>バク転教室</strong>（幼児〜） 18:00〜18:55（講師：野村・上地）</div>
+          <div class="fee-box">
+            <b>レッスン料金：</b>入会金3,000円（初年度保険料含む）／月会費5,500円／兄弟姉妹割引・複数受講割引：合計より1,000円引き／更新料1,000円
+          </div>
+        </div>
+      </div>
+
+      <div class="schedule-card">
+        <div class="schedule-day"><div class="dow">木曜</div></div>
+        <div>
+          <h3>スタジオMy（上条町）</h3>
+          <div class="area">春日井エリア</div>
+          <div class="lesson-line"><strong>アクロバットクラス</strong>（小学生〜） 17:00〜17:50（講師：野村）</div>
+          <div class="lesson-line"><strong>技チャレンジクラス</strong>（幼児〜） 18:00〜18:50（講師：野村・上地）</div>
+          <div class="fee-box">
+            <b>レッスン料金：</b>入会金3,000円（初年度保険料含む）／月会費5,500円／兄弟姉妹割引・複数受講割引：合計より1,000円引き／更新料1,000円
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="instructors">
+  <div class="wrap">
+    <span class="eyebrow">INSTRUCTOR</span>
+    <h2>講師の紹介</h2>
+    <div class="instructors">
+      <div class="instructor-card">
+        <div class="avatar"></div>
+        <h3>野村 亨介</h3>
+        <div class="role">Nomura Kyousuke ／ メイン指導員</div>
+        <p>保育士歴14年、発達支援員3年勤務。現在は発達支援員として働きながら体操指導員としても活動しています。学生時代は中学校の体操部に所属し、今でも体操が大好きです。その楽しさや「できた！」と感じる喜びを、子どもたちにもたくさん味わってほしいと思い、指導に取り組んでいます。実際に手本を見せながら分かりやすく丁寧に説明することを心がけ、何より安全面を第一に、子どもたちが安心してチャレンジできる環境づくりを大切にしています。</p>
+      </div>
+      <div class="instructor-card">
+        <div class="avatar"></div>
+        <h3>上地 ケンジ</h3>
+        <div class="role">Ueji Kenji ／ サブ指導員</div>
+        <p>小学1年生から野球を続け、現在は実業団チームでプレーしている体操の先生です。長年の競技経験で培った体の使い方を生かし、ジャンプやかけっこ、ボール遊びなどを通じて、体を動かす楽しさや「できた！」という達成感を大切にした指導を行っています。一人ひとりの頑張りをしっかりと受け止め、笑顔あふれる体操の時間を心掛けています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="voices" class="voices-alt">
+  <div class="wrap">
+    <span class="eyebrow">VOICE</span>
+    <h2>保護者様・先生方の声</h2>
+    <div class="voice-grid">
+      <div class="voice-card">
+        <div class="who">幼児保護者（30代）</div>
+        <p>できない（やれない）事はすぐに諦めてしまうタイプでしたが、運動教室でやることに関しては頑張って取り組んでいる姿が見られるようになりました。</p>
+      </div>
+      <div class="voice-card">
+        <div class="who">幼児保護者（30代）</div>
+        <p>動画で配信していただけるので楽しそうな様子や少しずつ上達している様子が視覚的に見てとれるのも嬉しいし、記録にもなるのが嬉しいです。</p>
+      </div>
+      <div class="voice-card">
+        <div class="who">小学生保護者（40代）</div>
+        <p>粘り強く技の習得に向けて練習をがんばる子になりました。自分なりの目標をもって休みの日にも練習したり、学校で練習してきたり主体的に取り組んでいます。</p>
+      </div>
+      <div class="voice-card">
+        <div class="who">小学生保護者（40代）</div>
+        <p>その子に合った声掛けをして下さるのが嬉しく安心です。「この子はこんな感じで声掛け等をするといいですよ」等、アドバイスを下さるので嬉しいです。</p>
+      </div>
+      <div class="voice-card">
+        <div class="who">幼児担任（30代）</div>
+        <p>どの子どもたちも毎週すごく楽しみにしています！子どもたち一人ひとりに合わせて声を掛けていただけるので、「ここまでやってみよう！」と自分自身で決めて挑戦する姿が見られました。</p>
+      </div>
+      <div class="voice-card">
+        <div class="who">幼児担任（20代）</div>
+        <p>「できない」「難しい」と言う子どもたちに寄り添いながらも、やってみようと思えるような声掛けが素敵だなと思いました。個々の特性にも親身になって教えていただけるので有難いです。</p>
+      </div>
+      <div class="voice-card">
+        <div class="who">乳児担任（20代）</div>
+        <p>子どもたちが伸び伸びと活動できるような配置でマットなどが準備してあり、興味のあることから活動を広げていくやり方が子どもたちも喜んで楽しんでいてとてもよいと感じました。</p>
+      </div>
+      <div class="voice-card">
+        <div class="who">園長（30代）</div>
+        <p>体操のみではなく人間性を育てようとするレッスンの姿勢が素晴らしいです！これからもよろしくお願いします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="cta-section">
+    <span class="eyebrow" style="color:#fff;">TRIAL LESSON</span>
+    <h2>体験レッスンに参加しよう！</h2>
+    <p>公式LINEで最新情報を受け取り、体験レッスンに申し込みましょう。</p>
+    <a class="cta-btn" href="https://lin.ee/s6IoexC" target="_blank" rel="noopener">体験レッスンに参加する</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="brand">JUMP UP</div>
+    <div class="foot-links">
+      <a href="https://educare-nagoya.com/" target="_blank" rel="noopener">運営：エデュカーレ（他の事業を見る）</a>
+      <a href="https://educare-nagoya.com/ksca" target="_blank" rel="noopener">自然体験教室 KSCA</a>
+      <a href="https://lin.ee/s6IoexC" target="_blank" rel="noopener">公式LINE</a>
+    </div>
+    <p>&copy; 2026 JUMP UP / educare. All Rights Reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

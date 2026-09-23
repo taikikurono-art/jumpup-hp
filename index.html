@@ -307,6 +307,7 @@
   .video-wrap{position:relative;width:100%;padding-bottom:56.25%;border-radius:12px;overflow:hidden;background:#000;}
   .video-wrap iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0;}
   .video-caption{margin-top:8px;font-size:13px;font-weight:700;color:var(--orange-deep);text-align:center;}
+  .video-hint{margin-top:4px;font-size:11.5px;color:var(--ink-soft);text-align:center;line-height:1.6;}
 
   /* class list */
   .class-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;margin-top:36px;}
@@ -618,8 +619,9 @@
 
     <div class="program-videos" style="max-width:520px;margin-left:auto;margin-right:auto;">
       <div class="video-item">
-        <div class="video-wrap"><iframe src="https://www.youtube.com/embed/u7IRxFztjxU" title="正課（幼児）レッスン動画" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        <div class="video-wrap" data-yt="u7IRxFztjxU" style="background-image:url(https://i.ytimg.com/vi/u7IRxFztjxU/hqdefault.jpg);background-size:cover;background-position:center;"><iframe title="正課（幼児）レッスン動画" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
         <p class="video-caption">正課（幼児）</p>
+        <p class="video-hint">画面に入ると音を消した状態で再生されます。音を出すには動画内のスピーカーを押してください。</p>
       </div>
     </div>
 
@@ -780,8 +782,9 @@
     <p class="lead">特定の園に通っていなくても参加できる、オープン形式の体操教室です。体を動かす楽しさを大切にしながら、一人ひとりの成長を応援しています。「厳しいのでは」「うちの子は運動が苦手だけど続けられるか心配」という方もご安心ください。休んだ日があっても置いていかれない、お子さん一人ひとりのペースを大切にしたレッスンです。オリジナルアプリ「JUMPUPクエスト」で技の習得をゲーム感覚で記録できるのも、スタジオレッスンならではの特徴です。対象は幼児・小学生・中学生です。<strong>体験レッスンは無料</strong>ですので、まずはお気軽にお試しください。</p>
     <div class="program-videos" style="max-width:520px;margin-left:auto;margin-right:auto;">
       <div class="video-item">
-        <div class="video-wrap"><iframe src="https://www.youtube.com/embed/5e5CyCe2PJI" title="スタジオレッスン（小学生）レッスン動画" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        <div class="video-wrap" data-yt="5e5CyCe2PJI" style="background-image:url(https://i.ytimg.com/vi/5e5CyCe2PJI/hqdefault.jpg);background-size:cover;background-position:center;"><iframe title="スタジオレッスン（小学生）レッスン動画" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
         <p class="video-caption">スタジオレッスン（小学生）</p>
+        <p class="video-hint">画面に入ると音を消した状態で再生されます。音を出すには動画内のスピーカーを押してください。</p>
       </div>
     </div>
     <div class="class-grid">
@@ -1015,5 +1018,48 @@
   </div>
 </footer>
 
+
+<script>
+(function(){
+  var wraps = document.querySelectorAll('.video-wrap[data-yt]');
+  if(!wraps.length) return;
+  var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function cmd(frame, func){
+    try{
+      frame.contentWindow.postMessage(JSON.stringify({event:'command', func:func, args:[]}), '*');
+    }catch(e){}
+  }
+
+  function load(wrap){
+    var frame = wrap.querySelector('iframe');
+    if(!frame || frame.getAttribute('src')) return;
+    var id = wrap.getAttribute('data-yt');
+    var params = 'playsinline=1&rel=0&enablejsapi=1&modestbranding=1';
+    if(!reduce) params = 'autoplay=1&mute=1&' + params;
+    frame.setAttribute('src', 'https://www.youtube.com/embed/' + id + '?' + params);
+  }
+
+  if(!('IntersectionObserver' in window)){
+    for(var i=0;i<wraps.length;i++) load(wraps[i]);
+    return;
+  }
+
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      var wrap = entry.target;
+      var frame = wrap.querySelector('iframe');
+      if(entry.isIntersecting){
+        if(!frame.getAttribute('src')) load(wrap);
+        else if(!reduce) cmd(frame, 'playVideo');
+      }else if(frame.getAttribute('src')){
+        cmd(frame, 'pauseVideo');
+      }
+    });
+  }, {threshold: 0.5});
+
+  for(var j=0;j<wraps.length;j++) io.observe(wraps[j]);
+})();
+</script>
 </body>
 </html>

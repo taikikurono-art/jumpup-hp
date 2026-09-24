@@ -493,7 +493,31 @@
   .voices-alt{background:var(--sand-soft);}
   .voice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px;}
   .voice-card{background:#fff;border-radius:18px;padding:22px 24px;box-shadow:var(--shadow);}
-  .voice-card .who{font-size:12px;font-weight:700;color:var(--orange-deep);margin-bottom:8px;}
+  .voice-card .who{font-size:12px;font-weight:700;color:var(--orange-deep);margin-bottom:8px;display:flex;align-items:center;gap:10px;}
+  .voice-card .who-ill{width:38px;height:38px;object-fit:contain;object-position:bottom;flex:none;}
+  .hero{position:relative;}
+  .hero-deco{position:absolute;inset:0;pointer-events:none;}
+  .hero-deco .d{position:absolute;opacity:.92;}
+  .hero-deco .d1{width:52px;top:8%;left:7%;transform:rotate(-8deg);}
+  .hero-deco .d2{width:64px;top:26%;right:8%;transform:rotate(6deg);}
+  .hero-deco .d3{width:48px;top:52%;left:11%;transform:rotate(10deg);}
+  .hero-deco .d4{width:58px;top:13%;right:18%;transform:rotate(-12deg);}
+  .hero-deco .d5{width:30px;top:60%;right:13%;}
+  .hero-wave{margin-top:28px;line-height:0;}
+  #program, #studio, #schedule, #instructors, #voices{position:relative;overflow:hidden;}
+  .sec-deco{position:absolute;width:56px;opacity:.9;pointer-events:none;}
+  .sec-deco.sd-a{top:38px;left:3.5%;transform:rotate(-6deg);}
+  .sec-deco.sd-b{top:44px;right:3.5%;transform:rotate(8deg);}
+  @media(max-width:1100px){ .sec-deco{display:none;} }
+  .hero-wave img{width:100%;display:block;}
+  @media(max-width:768px){
+    .hero-deco .d1{width:34px;top:4%;left:3%;}
+    .hero-deco .d2{display:none;}
+    .hero-deco .d4{display:none;}
+    .hero-deco .d3{width:30px;top:62%;left:3%;}
+    .hero-deco .d5{width:20px;top:67%;right:3%;}
+    .voice-card .who-ill{width:32px;height:32px;}
+  }
   .voice-card p{font-size:13px;color:var(--ink-soft);}
 
   /* cta section */
@@ -536,6 +560,13 @@
 </header>
 
 <section class="hero">
+  <div class="hero-deco" aria-hidden="true">
+    <img class="d d1" src="art/deco-heart.png" alt="">
+    <img class="d d2" src="art/deco-blue.png" alt="">
+    <img class="d d3" src="art/deco-green.png" alt="">
+    <img class="d d4" src="art/deco-yellow.png" alt="">
+    <img class="d d5" src="art/deco-circle.png" alt="">
+  </div>
   <div class="wrap">
     <span class="eyebrow">名古屋・春日井エリアの子ども向け体操教室</span>
     <h1><img src="jumpup-logo.png" alt="JUMP UP（ジャンプアップ）"></h1>
@@ -545,6 +576,7 @@
       <a class="cta-btn ghost" href="#schedule">教室・スケジュールを見る</a>
     </div>
   </div>
+  <div class="hero-wave" aria-hidden="true"><img src="art/wave-kids.png" alt=""></div>
 </section>
 
 <section class="audience">
@@ -567,6 +599,7 @@
 </section>
 
 <section id="program" class="programs-alt">
+  <img class="sec-deco sd-a" src="art/deco-yellow-circle.png" alt="" aria-hidden="true">
   <div class="wrap">
     <span class="eyebrow">PROGRAM</span>
     <h2>2つのプログラム</h2>
@@ -715,15 +748,15 @@
     <h3 class="section-sub">園長・保育士の声</h3>
     <div class="voice-grid">
       <div class="voice-card">
-        <div class="who">園長（30代）</div>
+        <div class="who"><img class="who-ill" src="art/p-wave.png" alt="" aria-hidden="true">園長（30代）</div>
         <p>体操のみではなく人間性を育てようとするレッスンの姿勢が素晴らしいです！これからもよろしくお願いします。</p>
       </div>
       <div class="voice-card">
-        <div class="who">幼児担任（30代）</div>
+        <div class="who"><img class="who-ill" src="art/p-yellow.png" alt="" aria-hidden="true">幼児担任（30代）</div>
         <p>どの子どもたちも毎週すごく楽しみにしています！子どもたち一人ひとりに合わせて声を掛けていただけるので、「ここまでやってみよう！」と自分自身で決めて挑戦する姿が見られました。</p>
       </div>
       <div class="voice-card">
-        <div class="who">幼児担任（20代）</div>
+        <div class="who"><img class="who-ill" src="art/p-red.png" alt="" aria-hidden="true">幼児担任（20代）</div>
         <p>「できない」「難しい」と言う子どもたちに寄り添いながらも、やってみようと思えるような声掛けが素敵だなと思いました。個々の特性にも親身になって教えていただけるので有難いです。</p>
       </div>
     </div>
@@ -776,6 +809,7 @@
 
 
 <section id="studio">
+  <img class="sec-deco sd-b" src="art/deco-green-circle.png" alt="" aria-hidden="true">
   <div class="wrap">
     <span class="eyebrow">誰でも通える</span>
     <h2>スタジオレッスン</h2>
@@ -912,6 +946,7 @@
 </section>
 
 <section id="schedule" class="programs-alt">
+  <img class="sec-deco sd-a" src="art/deco-yellow-square.png" alt="" aria-hidden="true">
   <div class="wrap">
     <span class="eyebrow">LOCATION &amp; SCHEDULE</span>
     <h2>教室・スケジュール</h2>
@@ -951,6 +986,7 @@
 </section>
 
 <section id="instructors">
+  <img class="sec-deco sd-b" src="art/deco-ink-squiggle.png" alt="" aria-hidden="true">
   <div class="wrap">
     <span class="eyebrow">INSTRUCTOR</span>
     <h2>スタジオレッスンの講師紹介</h2>
@@ -973,24 +1009,25 @@
 </section>
 
 <section id="voices" class="voices-alt">
+  <img class="sec-deco sd-a" src="art/deco-yellow-half.png" alt="" aria-hidden="true">
   <div class="wrap">
     <span class="eyebrow">VOICE</span>
     <h2>保護者様の声</h2>
     <div class="voice-grid">
       <div class="voice-card">
-        <div class="who">幼児保護者（30代）</div>
+        <div class="who"><img class="who-ill" src="art/p-child-blue.png" alt="" aria-hidden="true">幼児保護者（30代）</div>
         <p>できない（やれない）事はすぐに諦めてしまうタイプでしたが、運動教室でやることに関しては頑張って取り組んでいる姿が見られるようになりました。</p>
       </div>
       <div class="voice-card">
-        <div class="who">幼児保護者（30代）</div>
+        <div class="who"><img class="who-ill" src="art/p-yellow.png" alt="" aria-hidden="true">幼児保護者（30代）</div>
         <p>動画で配信していただけるので楽しそうな様子や少しずつ上達している様子が視覚的に見てとれるのも嬉しいし、記録にもなるのが嬉しいです。</p>
       </div>
       <div class="voice-card">
-        <div class="who">小学生保護者（40代）</div>
+        <div class="who"><img class="who-ill" src="art/p-red.png" alt="" aria-hidden="true">小学生保護者（40代）</div>
         <p>粘り強く技の習得に向けて練習をがんばる子になりました。自分なりの目標をもって休みの日にも練習したり、学校で練習してきたり主体的に取り組んでいます。</p>
       </div>
       <div class="voice-card">
-        <div class="who">小学生保護者（40代）</div>
+        <div class="who"><img class="who-ill" src="art/p-wave.png" alt="" aria-hidden="true">小学生保護者（40代）</div>
         <p>その子に合った声掛けをして下さるのが嬉しく安心です。「この子はこんな感じで声掛け等をするといいですよ」等、アドバイスを下さるので嬉しいです。</p>
       </div>
     </div>

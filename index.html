@@ -1049,14 +1049,15 @@
     entries.forEach(function(entry){
       var wrap = entry.target;
       var frame = wrap.querySelector('iframe');
-      if(entry.isIntersecting){
+      var visible = entry.isIntersecting && entry.intersectionRatio >= 0.25;
+      if(visible){
         if(!frame.getAttribute('src')) load(wrap);
         else if(!reduce) cmd(frame, 'playVideo');
-      }else if(frame.getAttribute('src')){
+      }else if(!entry.isIntersecting && frame.getAttribute('src')){
         cmd(frame, 'pauseVideo');
       }
     });
-  }, {threshold: 0.5});
+  }, {threshold: [0, 0.25], rootMargin: '0px 0px -10% 0px'});
 
   for(var j=0;j<wraps.length;j++) io.observe(wraps[j]);
 })();
